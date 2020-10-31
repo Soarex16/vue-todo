@@ -4,7 +4,7 @@
       v-for="t in todos"
       :key="t.text"
       :todo="t"
-      @delete:todo="deleteTodo(t)"
+      @todo:delete="deleteTodo(t)"
     />
   </ul>
 </template>

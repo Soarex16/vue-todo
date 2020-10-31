@@ -1,7 +1,12 @@
 <template>
   <li>
     {{ todo.text }}
-    <input type="checkbox" checked="todo.completed" />
+
+    <input
+      type="checkbox"
+      v-model="todo.completed"
+    />
+    
     <todo-list-item-delete-button @click="deleteTodo"/>
   </li>
 </template>
@@ -22,7 +27,7 @@ export default Vue.extend({
   },
   methods: {
     deleteTodo() {
-      this.$emit("delete:todo")
+      this.$emit("todo:delete")
     }
   }
 })

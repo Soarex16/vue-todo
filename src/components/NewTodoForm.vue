@@ -20,7 +20,7 @@ export default Vue.extend({
   },
   methods: {
     addNewTodo() {
-      this.$emit('create:todo', this.newTodoText);
+      this.$emit('todo:create', this.newTodoText);
       this.newTodoText = '';
     }
   }

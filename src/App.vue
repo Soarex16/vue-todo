@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <new-todo-form @create:todo="createTodo" />
+    <new-todo-form @todo:create="createTodo" />
     <todo-list :todos="todos" />
   </div>
 </template>
@@ -28,7 +28,7 @@ export default Vue.extend({
       todos: [
         {
           text: "Todo 1",
-          completed: false
+          completed: true
         },
         {
           text: "Todo 2",
